@@ -7,18 +7,6 @@ buildscript {
     }
 }
 
-ext {
-    blackduck_hubIgnoreFailure = true
-	blackduck_hubCodeLocationName = SampleGradleProject
-	blackduck_hubProjectName = SampleGradleProject
-	blackduck_hubVersionName = 1.0
-	blackduck_hubTimeout = 120
-	blackduck_createFlatDependencyList = false
-	blackduck_createHubBdio = true
-	blackduck_deployHubBdio = true
-	blackduck_checkPolicies = true
-}
-
 group 'com.blackduck'
 version '1.0'
 
@@ -40,4 +28,13 @@ buildBom {
     hubUrl = 'https://bizdevhub.blackducksoftware.com'
     hubUsername = 'sysadmin'
     hubPassword = 'F@w0m0!'
+    hubIgnoreFailure = true
+	hubCodeLocationName = SampleGradleProject
+	hubProjectName = SampleGradleProject
+	hubVersionName = 1.0
+	hubTimeout = 120
+	createFlatDependencyList = false
+	createHubBdio = true
+	deployHubBdio = true
+	checkPolicies = true
 }

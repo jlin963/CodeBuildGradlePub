@@ -1,4 +1,4 @@
-package org.jacoco.examples.java.gradle;
+package com.blackduck.helloworld;
 
 public class HelloWorld {
 	

@@ -1,11 +1,32 @@
-group 'org.jacoco'
-version '1.0-SNAPSHOT'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '5.0.2'
+    }
+}
+
+ext {
+    blackduck_hubIgnoreFailure = true
+	blackduck_hubCodeLocationName = SampleGradleProject
+	blackduck_hubProjectName = SampleGradleProject
+	blackduck_hubVersionName = 1.0
+	blackduck_hubTimeout = 120
+	blackduck_createFlatDependencyList = false
+	blackduck_createHubBdio = true
+	blackduck_deployHubBdio = true
+	blackduck_checkPolicies = true
+}
+
+group 'com.blackduck'
+version '1.0'
 
 apply plugin: 'java'
-apply plugin: 'jacoco'
+apply plugin: 'com.blackducksoftware.hub'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -15,11 +36,8 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-jacocoTestReport {
-    reports {
-        xml.enabled true
-        html.enabled false
-    }
+buildBom {
+    hubUrl = 'https://bizdevhub.blackducksoftware.com'
+    hubUsername = 'sysadmin'
+    hubPassword = 'F@w0m0!'
 }
-
-check.dependsOn jacocoTestReport

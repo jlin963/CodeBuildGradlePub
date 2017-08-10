@@ -1,7 +1,9 @@
-package org.jacoco.examples.java.gradle;
+package com.blackduck.helloworld;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.blackduck.helloworld.HelloWorld;
 
 import static org.junit.Assert.assertEquals;
 

@@ -29,9 +29,9 @@ buildBom {
     hubUsername = 'sysadmin'
     hubPassword = 'F@w0m0!'
     hubIgnoreFailure = true
-	hubCodeLocationName = SampleGradleProject
-	hubProjectName = SampleGradleProject
-	hubVersionName = 1.0
+	hubCodeLocationName = 'SampleGradleProject'
+	hubProjectName = 'SampleGradleProject'
+	hubVersionName = '1.0'
 	hubTimeout = 120
 	createFlatDependencyList = false
 	createHubBdio = true

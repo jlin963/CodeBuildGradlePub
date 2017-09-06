@@ -12,7 +12,7 @@ phases:
       - gradle build 
   post_build:
     commands:
-      - bash hub-detect.sh --blackduck.hub.url=$hubUrl --blackduck.hub.username=$hubUserName --blackduck.hub.password=$hubPassword --detect.risk.report.pdf=true --detect.risk.report.pdf.path=arn:aws:s3:::instanceburlingtion
+      - bash hub-detect.sh --blackduck.hub.url=$hubUrl --blackduck.hub.username=$hubUserName --blackduck.hub.password=$hubPassword --detect.risk.report.pdf=true --detect.risk.report.pdf.path=s3://instanceburlingtion/SampleGradleProject
 
 artifacts:
   files:

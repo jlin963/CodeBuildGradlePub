@@ -16,6 +16,6 @@ phases:
 
 artifacts:
   files:
-    - build/libs/HelloWorld-1.0.jar
+    - build/libs/HelloWorld-Gradle-1.0.jar
     - '**/*.pdf'
   discard-paths: yes

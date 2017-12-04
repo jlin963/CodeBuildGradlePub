@@ -18,6 +18,7 @@ public class HelloWorldTest {
 	
 	@Test
 	public void testGetMessage() {
+		// comment
 		assertEquals("Hello World!", subject.getMessage(false));
 	}
 	
